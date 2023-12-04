@@ -81,7 +81,7 @@ MAX = 20
 for index in range(MAX):
     print(f"Progresso {(index/MAX) * 100}% ({index}/{MAX})")
     init_time = time()
-    result = particle_swarm_optmization(dimension, population, iterations, inf_limit, up_limit, seed, index+1, fitness_fn)
+    result = particle_swarm_optimization(dimension, population, iterations, inf_limit, up_limit, seed, index+1, fitness_fn)
     end_time = time()
     times.append(end_time - init_time)
     all_fitness.append(result[2][2])
@@ -105,4 +105,4 @@ print(f"Melhor tempo: {best_time}")
 print(f"Melhor Fitness: {best_fit}")
 
 print(f"Melhor fit: {result[0]}")
-print(result[1])
+print(global_best)
